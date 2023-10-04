@@ -1,0 +1,28 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Monstro {
+  id              String @id @default(uuid()) // O tipo de dados pode variar com base no seu banco de dados
+  monster_id      Int
+  monster_info    String
+  size            String
+  race            String
+  type            String
+  element_power   Int
+  gif             String
+  main_atb        Json
+  main_stats      Json
+  elementalDamage Json
+  skills          Json
+  drops           Json[]
+  maps            Json[]
+}

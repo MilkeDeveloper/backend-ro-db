@@ -16,7 +16,8 @@ app.register( cors , {
 })
 
 app.listen({
-    port: process.env.PORT ? Number(process.env.PORT) : 5700
+    host: '0.0.0.0',
+    port: process.env.PORT ? Number(process.env.PORT) : 5400
 }).then(() => {
-    console.log("Server started on port 5700");
+    console.log("HTTP Server running...");
 })

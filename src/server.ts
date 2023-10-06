@@ -11,7 +11,8 @@ app.register(sendMonsterById)
 app.register(getAllMonstersHandler)
 app.register(getPaginatedMonsters)
 app.register( cors , {
-    origin: '*'
+    origin: '*',
+    
 
 })
 
